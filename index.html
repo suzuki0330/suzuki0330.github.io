@@ -137,8 +137,8 @@
     }
     .achiev-card:hover { transform: translateY(-4px); box-shadow: 0 16px 48px rgba(0,0,0,0.1); }
     .achiev-card.full-width { grid-column: 1 / -1; display: grid; grid-template-columns: 480px 1fr; }
-    .achiev-photo { width: 100%; height: auto; display: block; background: #f0f2f5; }
-    .achiev-card.full-width .achiev-photo { width: 100%; height: 100%; object-fit: cover; min-height: 300px; }
+    .achiev-photo { width: 100%; aspect-ratio: 16/9; object-fit: cover; object-position: center center; display: block; background: #f0f2f5; }
+    .achiev-card.full-width .achiev-photo { width: 100%; height: 100%; min-height: 300px; aspect-ratio: auto; object-fit: cover; object-position: center; }
     .achiev-body { padding: 24px 26px; }
     .achiev-badge {
       display: inline-flex; align-items: center; gap: 6px;
@@ -400,7 +400,7 @@
     </div>
 
         <div class="achiev-card">
-          <img src="images/achiev-kakamigahara.jpg" alt="かかみがはらSDGsパートナー交流会" class="achiev-photo">
+          <img src="images/achiev-kakamigahara.png" alt="かかみがはらSDGsパートナー交流会" class="achiev-photo">
           <div class="achiev-body">
             <span class="achiev-badge">🎤 講演 2026.1.29</span>
             <h3 class="achiev-title">第4回 かかみがはらSDGsパートナー交流会<br>和光会グループSDGs取り組み講演</h3>
@@ -415,7 +415,7 @@
       <div class="year-label">2025</div>
       <div class="achiev-cards">
         <div class="achiev-card">
-          <img src="images/award-workstyle.jpg" alt="全国ワークスタイル変革大賞 大賞" class="achiev-photo">
+          <img src="images/award-workstyle.jpg" alt="全国ワークスタイル変革大賞 大賞" class="achiev-photo" style="object-position:center 40%;">
           <div class="achiev-body">
             <span class="achiev-badge">🏆 大賞（最高賞）</span>
             <h3 class="achiev-title">全国ワークスタイル変革大賞2025<br>全国大会 大賞</h3>
@@ -424,7 +424,7 @@
           </div>
         </div>
         <div class="achiev-card">
-          <img src="images/achiev-loglass2.jpg" alt="Loglass経営管理DXアワード" class="achiev-photo">
+          <img src="images/achiev-loglass2.jpg" alt="Loglass経営管理DXアワード" class="achiev-photo" style="object-position:center 60%;">
           <div class="achiev-body">
             <span class="achiev-badge">🏅 審査員特別賞</span>
             <h3 class="achiev-title">Loglass 経営管理DX Award 2025<br>審査員特別賞</h3>
@@ -433,7 +433,7 @@
           </div>
         </div>
         <div class="achiev-card">
-          <img src="images/achiev-benkyokai.jpg" alt="病院ファンづくり合同勉強会" class="achiev-photo">
+          <img src="images/achiev-benkyokai.jpg" alt="病院ファンづくり合同勉強会" class="achiev-photo" style="object-position:center 30%;">
           <div class="achiev-body">
             <span class="achiev-badge">🎤 事例発表</span>
             <h3 class="achiev-title">病院ファンづくり合同勉強会（第27回）<br>事例発表</h3>
@@ -444,7 +444,7 @@
           </div>
         </div>
         <div class="achiev-card">
-          <img src="images/media-gifu-woman.jpg" alt="ウーマンコネクト" class="achiev-photo" style="object-position:top;">
+          <img src="images/media-gifu-woman.jpg" alt="ウーマンコネクト" class="achiev-photo" style="object-position:center 20%;">
           <div class="achiev-body">
             <span class="achiev-badge">🌸 登壇・主催</span>
             <h3 class="achiev-title">ウーマンコネクト2025<br>岐阜新聞掲載</h3>
@@ -459,7 +459,7 @@
       <div class="year-label">2024</div>
       <div class="achiev-cards">
         <div class="achiev-card">
-          <img src="images/achiev-school.jpg" alt="SDGs出前授業" class="achiev-photo">
+          <img src="images/achiev-school.jpg" alt="SDGs出前授業" class="achiev-photo" style="object-position:center 40%;">
           <div class="achiev-body">
             <span class="achiev-badge">📚 出前授業</span>
             <h3 class="achiev-title">SDGs出前授業<br>岐阜市立陽南中学校ほか</h3>
