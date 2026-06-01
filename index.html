@@ -107,6 +107,20 @@
     .profile-links { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 20px; }
     .profile-link { display: inline-flex; align-items: center; gap: 6px; color: var(--navy-light); font-size: 0.83rem; text-decoration: none; border-bottom: 1px solid var(--border); padding-bottom: 2px; transition: color 0.2s, border-color 0.2s; }
     .profile-link:hover { color: var(--gold); border-color: var(--gold); }
+    /* プロフィール基本情報 */
+    .profile-info-grid { display: flex; flex-direction: column; gap: 10px; margin-bottom: 8px; }
+    .profile-info-item { display: grid; grid-template-columns: 56px 1fr; gap: 12px; align-items: baseline; }
+    .pi-label { font-size: 0.75rem; color: var(--gold); font-weight: 700; letter-spacing: 0.05em; white-space: nowrap; }
+    .pi-value { font-size: 0.88rem; color: var(--gray-text); line-height: 1.7; }
+    /* キャリアタイムライン */
+    .career-timeline { position: relative; padding-left: 20px; margin-top: 16px; }
+    .career-timeline::before { content: ''; position: absolute; left: 54px; top: 8px; bottom: 8px; width: 2px; background: var(--border); }
+    .ct-item { display: grid; grid-template-columns: 54px 1fr; gap: 16px; align-items: start; padding: 10px 0; position: relative; }
+    .ct-item::before { content: ''; position: absolute; left: 46px; top: 16px; width: 10px; height: 10px; border-radius: 50%; background: var(--white); border: 2px solid var(--border); }
+    .ct-current::before { border-color: var(--gold); background: var(--gold); }
+    .ct-year { font-size: 0.8rem; font-weight: 700; color: var(--navy); padding-top: 2px; white-space: nowrap; }
+    .ct-current .ct-year { color: var(--gold); }
+    .ct-text { font-size: 0.86rem; color: var(--gray-text); line-height: 1.7; }
 
     /* ===== ③ 主な実績 ===== */
     .achievements { background: var(--white); }
@@ -313,26 +327,40 @@
           <span class="profile-tag">地域共創</span>
           <span class="profile-tag">DX推進</span>
           <span class="profile-tag">女性活躍</span>
-          <span class="profile-tag">作業療法士</span>
+          <span class="profile-tag">MBA在学中</span>
           <span class="profile-tag">ラジオパーソナリティ</span>
         </div>
       </div>
       <div class="profile-body">
         <p class="section-eyebrow">Profile</p>
         <h2 class="section-title">プロフィール</h2>
-        <div class="profile-org">
-          <p class="profile-org-title">所属</p>
-          <p class="profile-org-name">医療法人和光会 山田病院</p>
+
+        <div class="profile-info-grid">
+          <div class="profile-info-item"><span class="pi-label">出身</span><span class="pi-value">横浜生まれ愛知育ち、岐阜在住</span></div>
+          <div class="profile-info-item"><span class="pi-label">資格</span><span class="pi-value">教員免許一種（小/中/高 英語）、キャリアコンサルタント、ファイナンシャル・プランニング技能士、保育士、簿記、G検定 etc</span></div>
+          <div class="profile-info-item"><span class="pi-label">特技</span><span class="pi-value">バレーボール（歴20年）</span></div>
+          <div class="profile-info-item"><span class="pi-label">週末</span><span class="pi-value">経営大学院でMBA勉強中 / ゴルフ練習中</span></div>
+          <div class="profile-info-item"><span class="pi-label">推し</span><span class="pi-value">葉加瀬太郎</span></div>
         </div>
-        <h3>経歴</h3>
-        <p>作業療法士として入職後、リハビリテーション業務に従事。現在は広報活動・SDGs推進・地域連携プロジェクト・病院ブランディングなどを担当し、医療・介護・教育・企業をつなぐ取り組みを展開しています。</p>
-        <h3>活動の特徴</h3>
+
+        <h3 style="margin-top:32px;">キャリアタイムライン</h3>
+        <div class="career-timeline">
+          <div class="ct-item"><div class="ct-year">2001</div><div class="ct-text">将来学校の先生になると決意（中１）</div></div>
+          <div class="ct-item"><div class="ct-year">2007</div><div class="ct-text">愛知教育大学へ進学</div></div>
+          <div class="ct-item"><div class="ct-year">2011</div><div class="ct-text">愛知県で中学校英語教員になる（地方公務員）<br>中１〜中３担任、部活顧問で全国大会出場</div></div>
+          <div class="ct-item"><div class="ct-year">2018</div><div class="ct-text">結婚→退職して岐阜へ引っ越し<br>和光会グループへ入職（秘書）</div></div>
+          <div class="ct-item"><div class="ct-year">2022</div><div class="ct-text">理事長室 室長 就任</div></div>
+          <div class="ct-item"><div class="ct-year">2023</div><div class="ct-text">SDGs推進室 室長就任 ／ DX推進室 兼務</div></div>
+          <div class="ct-item ct-current"><div class="ct-year">2025〜</div><div class="ct-text">広報室 室長 就任</div></div>
+        </div>
+
+        <h3 style="margin-top:28px;">活動の特徴</h3>
         <p>病院公式キャラクター「なごみちゃん・ひかるちゃん」を活用した情報発信や、ラジオ番組「なごひかラジオ」のパーソナリティとしても活動。学校・企業・行政との共創プロジェクトを通じて、岐阜県の地域課題解決に取り組んでいます。</p>
         <p>全国ワークスタイル変革大賞 大賞、病院ファンづくり甲子園 優勝など、複数の全国大会で最高賞を受賞。「医療・福祉の現場から、地域を元気にする」ことをミッションに日々活動しています。</p>
         <div class="profile-links">
-          <a href="https://100th.wakokai.or.jp/radio/" target="_blank" class="profile-link">🎙 なごひかラジオ</a>
-          <a href="https://ohisamamarche.okb.co.jp/local/index.html" target="_blank" class="profile-link">🌸 おひさまマルシェ</a>
-          <a href="https://gifujo.pref.gifu.lg.jp/message/2024/08/post-437.html" target="_blank" class="profile-link">📍 ギフジョ！</a>
+          <a href="https://100th.wakokai.or.jp/radio/" target="_blank" rel="noopener noreferrer" class="profile-link">🎙 なごひかラジオ</a>
+          <a href="https://ohisamamarche.okb.co.jp/local/index.html" target="_blank" rel="noopener noreferrer" class="profile-link">🌸 おひさまマルシェ</a>
+          <a href="https://gifujo.pref.gifu.lg.jp/message/2024/08/post-437.html" target="_blank" rel="noopener noreferrer" class="profile-link">📍 ギフジョ！</a>
         </div>
       </div>
     </div>
@@ -356,7 +384,16 @@
             <span class="achiev-badge">🏆 優勝（第1位）</span>
             <h3 class="achiev-title">病院ファンづくり甲子園<br>全国大会 優勝</h3>
             <p class="achiev-desc">全国6エリアの地区予選を勝ち抜いたチームが大阪に集結する全国大会で第1位を獲得。「SDGsがもたらした地域・学校・企業との新たな出会い」をテーマに、病院広報と地域共創の取り組みを発表し最高評価を受けた。</p>
-            <a href="https://www.youtube.com/watch?v=S8SY177wojs" target="_blank" class="achiev-link">予選動画を見る →</a>
+            <a href="https://www.youtube.com/watch?v=S8SY177wojs" target="_blank" rel="noopener noreferrer" class="achiev-link">予選動画を見る →</a>
+          </div>
+        </div>
+        <div class="achiev-card">
+          <img src="images/activity-school.jpg" alt="未来のしごとセミナー" class="achiev-photo">
+          <div class="achiev-body">
+            <span class="achiev-badge">🎤 登壇</span>
+            <h3 class="achiev-title">"人の役に立つ"だけじゃない。<br>医療・福祉の仕事がちょっと面白くなる話</h3>
+            <p class="achiev-desc">岐阜県若者サポートステーション（ぎふサポ）主催イベントに登壇。医療・福祉の仕事の魅力を若者に向けて発信。</p>
+            <a href="https://gifusapo.org/" target="_blank" rel="noopener noreferrer" class="achiev-link">ぎふサポ掲載ページを見る →</a>
           </div>
         </div>
       </div>
@@ -385,12 +422,14 @@
           </div>
         </div>
         <div class="achiev-card">
-          <img src="images/award-speech.jpg" alt="病院ファンづくり合同勉強会" class="achiev-photo">
+          <img src="images/achiev-benkyokai.jpg" alt="病院ファンづくり合同勉強会" class="achiev-photo">
           <div class="achiev-body">
             <span class="achiev-badge">🎤 事例発表</span>
             <h3 class="achiev-title">病院ファンづくり合同勉強会（第27回）<br>事例発表</h3>
             <p class="achiev-desc">「病院ファンづくりの歩み ～SDGsがもたらした地域・学校・企業との新たな出会い～」をテーマに登壇。</p>
-            <a href="https://hospital-marketing.jp/news-blog/s20250409/" target="_blank" class="achiev-link">詳細を見る →</a>
+            <a href="https://hospital-marketing.jp/news-blog/s20250409/" target="_blank" rel="noopener noreferrer" class="achiev-link">詳細を見る →</a>
+            &nbsp;／&nbsp;
+            <a href="https://us06web.zoom.us/rec/play/1lPlZgRYtlYg2fMc1wODBHv_H4BuCBjEmkQ1ciRcKEnnb8CrQF6Nk3vwVHaYyuTzFEeDnxADUA1f1iH3.c921qItx26ZM-Roe?accessLevel=meeting&canPlayFromShare=true&from=share_recording_detail&continueMode=true" target="_blank" rel="noopener noreferrer" class="achiev-link">▶ 録画を見る →</a>
           </div>
         </div>
         <div class="achiev-card">
